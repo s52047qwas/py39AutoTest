@@ -1,0 +1,540 @@
+2021-05-29 21:45:20,482-py39-INFO-handle_excel.py-__init__-[line:16]：用例文件名称:
+2021-05-29 21:45:20,483-py39-INFO-handle_excel.py-__init__-[line:17]：D:\ningMengClass\py39AutoTest\case_data\testCase.xlsx
+2021-05-29 21:45:20,483-py39-INFO-handle_excel.py-__init__-[line:18]：sheet_name:
+2021-05-29 21:45:20,483-py39-INFO-handle_excel.py-__init__-[line:19]：register
+2021-05-29 21:45:20,507-py39-INFO-handle_excel.py-__get_all_data-[line:33]：excel读取到的测试用例数据：
+2021-05-29 21:45:20,507-py39-INFO-handle_excel.py-__get_all_data-[line:34]：[(1, '注册成功普通用户,昵称10位,密码长度8位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"#mobile_phone#","pwd":"Aa123456","type":0,"reg_name":"注册注册注册注册注册"}', '{"code": 0, "msg": "OK"}'), (2, '注册成功管理员,昵称1位,密码长度16位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13100000002","pwd":"Aa12345678901234","type":0,"reg_name":"注"}', '{"code": 0, "msg": "OK"}'), (3, '注册成功不传用户类型和昵称字段', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13100000003","pwd":"Aa123456"}', '{"code": 0, "msg": "OK"}'), (5, '注册普通用户失败手机号已存在', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"18820992515","pwd":"Aa123456"}', '{"code": 2, "msg": "账号已存在"}'), (6, '注册普通用户失败手机号10位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"1882099222","pwd":"Aa123456"}', '{"code": 2, "msg": "无效的手机格式"}'), (7, '注册普通用户失败手机号12位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"188209922231","pwd":"Aa123456"}', '{"code": 2, "msg": "无效的手机格式"}'), (8, '注册普通用户失败手机号为空', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"","pwd":"Aa123456"}', '{"code": 1, "msg": "手机号为空"}'), (9, '注册普通用户失败密码长度17位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": "Aa123456789012345"}', '{"code": 2, "msg": "密码格式为8到16位"}'), (10, '注册普通用户失败密码长度7位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": "Aa12345"}', '{"code": 2, "msg": "密码格式为8到16位"}'), (11, '注册普通用户失败密码为空', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": ""}', '{"code": 1, "msg": "密码为空"}')]
+2021-05-29 21:45:20,507-py39-INFO-handle_excel.py-__get_all_data-[line:35]：excel读取到的测试用例表头数据：
+2021-05-29 21:45:20,508-py39-INFO-handle_excel.py-__get_all_data-[line:36]：('id', 'title', 'method', 'url', 'data', 'expected_data')
+2021-05-29 21:45:20,508-py39-INFO-handle_excel.py-get_case_data_dict-[line:47]：测试用例数据拼接完成：
+2021-05-29 21:45:20,508-py39-INFO-handle_excel.py-get_case_data_dict-[line:48]：[{'id': 1, 'title': '注册成功普通用户,昵称10位,密码长度8位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"#mobile_phone#","pwd":"Aa123456","type":0,"reg_name":"注册注册注册注册注册"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 2, 'title': '注册成功管理员,昵称1位,密码长度16位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13100000002","pwd":"Aa12345678901234","type":0,"reg_name":"注"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 3, 'title': '注册成功不传用户类型和昵称字段', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13100000003","pwd":"Aa123456"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 5, 'title': '注册普通用户失败手机号已存在', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"18820992515","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "账号已存在"}'}, {'id': 6, 'title': '注册普通用户失败手机号10位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"1882099222","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "无效的手机格式"}'}, {'id': 7, 'title': '注册普通用户失败手机号12位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"188209922231","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "无效的手机格式"}'}, {'id': 8, 'title': '注册普通用户失败手机号为空', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"","pwd":"Aa123456"}', 'expected_data': '{"code": 1, "msg": "手机号为空"}'}, {'id': 9, 'title': '注册普通用户失败密码长度17位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": "Aa123456789012345"}', 'expected_data': '{"code": 2, "msg": "密码格式为8到16位"}'}, {'id': 10, 'title': '注册普通用户失败密码长度7位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": "Aa12345"}', 'expected_data': '{"code": 2, "msg": "密码格式为8到16位"}'}, {'id': 11, 'title': '注册普通用户失败密码为空', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": ""}', 'expected_data': '{"code": 1, "msg": "密码为空"}'}]
+2021-05-29 21:45:20,517-py39-INFO-handle_request.py-send_request-[line:21]：请求方式:
+post
+2021-05-29 21:45:20,517-py39-INFO-handle_request.py-send_request-[line:22]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:45:20,517-py39-INFO-handle_request.py-send_request-[line:23]：请求参数：
+{'mobile_phone': '#mobile_phone#', 'pwd': 'Aa123456', 'type': 0, 'reg_name': '注册注册注册注册注册'}
+2021-05-29 21:45:20,556-py39-INFO-handle_request.py-send_request-[line:31]：POST请求返回:
+{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:45:20,556-py39-INFO-handle_request.py-send_request-[line:21]：请求方式:
+post
+2021-05-29 21:45:20,556-py39-INFO-handle_request.py-send_request-[line:22]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:45:20,556-py39-INFO-handle_request.py-send_request-[line:23]：请求参数：
+{'mobile_phone': '13100000002', 'pwd': 'Aa12345678901234', 'type': 0, 'reg_name': '注'}
+2021-05-29 21:45:20,620-py39-INFO-handle_request.py-send_request-[line:31]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:45:20,620-py39-INFO-handle_request.py-send_request-[line:21]：请求方式:
+post
+2021-05-29 21:45:20,620-py39-INFO-handle_request.py-send_request-[line:22]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:45:20,620-py39-INFO-handle_request.py-send_request-[line:23]：请求参数：
+{'mobile_phone': '13100000003', 'pwd': 'Aa123456'}
+2021-05-29 21:45:20,693-py39-INFO-handle_request.py-send_request-[line:31]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:45:20,694-py39-INFO-handle_request.py-send_request-[line:21]：请求方式:
+post
+2021-05-29 21:45:20,694-py39-INFO-handle_request.py-send_request-[line:22]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:45:20,694-py39-INFO-handle_request.py-send_request-[line:23]：请求参数：
+{'mobile_phone': '18820992515', 'pwd': 'Aa123456'}
+2021-05-29 21:45:20,761-py39-INFO-handle_request.py-send_request-[line:31]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:45:20,761-py39-INFO-handle_request.py-send_request-[line:21]：请求方式:
+post
+2021-05-29 21:45:20,761-py39-INFO-handle_request.py-send_request-[line:22]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:45:20,762-py39-INFO-handle_request.py-send_request-[line:23]：请求参数：
+{'mobile_phone': '1882099222', 'pwd': 'Aa123456'}
+2021-05-29 21:45:20,805-py39-INFO-handle_request.py-send_request-[line:31]：POST请求返回:
+{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:45:20,805-py39-INFO-handle_request.py-send_request-[line:21]：请求方式:
+post
+2021-05-29 21:45:20,805-py39-INFO-handle_request.py-send_request-[line:22]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:45:20,805-py39-INFO-handle_request.py-send_request-[line:23]：请求参数：
+{'mobile_phone': '188209922231', 'pwd': 'Aa123456'}
+2021-05-29 21:45:20,864-py39-INFO-handle_request.py-send_request-[line:31]：POST请求返回:
+{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:45:20,865-py39-INFO-handle_request.py-send_request-[line:21]：请求方式:
+post
+2021-05-29 21:45:20,865-py39-INFO-handle_request.py-send_request-[line:22]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:45:20,865-py39-INFO-handle_request.py-send_request-[line:23]：请求参数：
+{'mobile_phone': '', 'pwd': 'Aa123456'}
+2021-05-29 21:45:20,902-py39-INFO-handle_request.py-send_request-[line:31]：POST请求返回:
+{'code': 1, 'msg': '手机号为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:45:20,903-py39-INFO-handle_request.py-send_request-[line:21]：请求方式:
+post
+2021-05-29 21:45:20,903-py39-INFO-handle_request.py-send_request-[line:22]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:45:20,903-py39-INFO-handle_request.py-send_request-[line:23]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': 'Aa123456789012345'}
+2021-05-29 21:45:20,958-py39-INFO-handle_request.py-send_request-[line:31]：POST请求返回:
+{'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:45:20,958-py39-INFO-handle_request.py-send_request-[line:21]：请求方式:
+post
+2021-05-29 21:45:20,958-py39-INFO-handle_request.py-send_request-[line:22]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:45:20,959-py39-INFO-handle_request.py-send_request-[line:23]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': 'Aa12345'}
+2021-05-29 21:45:21,024-py39-INFO-handle_request.py-send_request-[line:31]：POST请求返回:
+{'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:45:21,025-py39-INFO-handle_request.py-send_request-[line:21]：请求方式:
+post
+2021-05-29 21:45:21,025-py39-INFO-handle_request.py-send_request-[line:22]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:45:21,025-py39-INFO-handle_request.py-send_request-[line:23]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': ''}
+2021-05-29 21:45:21,093-py39-INFO-handle_request.py-send_request-[line:31]：POST请求返回:
+{'code': 1, 'msg': '密码为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:52:23,916-py39-INFO-handle_excel.py-__init__-[line:16]：用例文件名称:
+2021-05-29 21:52:23,916-py39-INFO-handle_excel.py-__init__-[line:17]：D:\ningMengClass\py39AutoTest\case_data\testCase.xlsx
+2021-05-29 21:52:23,916-py39-INFO-handle_excel.py-__init__-[line:18]：sheet_name:
+2021-05-29 21:52:23,916-py39-INFO-handle_excel.py-__init__-[line:19]：register
+2021-05-29 21:52:23,937-py39-INFO-handle_excel.py-__get_all_data-[line:33]：excel读取到的测试用例数据：
+2021-05-29 21:52:23,937-py39-INFO-handle_excel.py-__get_all_data-[line:34]：[(1, '注册成功普通用户,昵称10位,密码长度8位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"#mobile_phone#","pwd":"Aa123456","type":0,"reg_name":"注册注册注册注册注册"}', '{"code": 0, "msg": "OK"}'), (2, '注册成功管理员,昵称1位,密码长度16位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13100000002","pwd":"Aa12345678901234","type":0,"reg_name":"注"}', '{"code": 0, "msg": "OK"}'), (3, '注册成功不传用户类型和昵称字段', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13100000003","pwd":"Aa123456"}', '{"code": 0, "msg": "OK"}'), (5, '注册普通用户失败手机号已存在', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"18820992515","pwd":"Aa123456"}', '{"code": 2, "msg": "账号已存在"}'), (6, '注册普通用户失败手机号10位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"1882099222","pwd":"Aa123456"}', '{"code": 2, "msg": "无效的手机格式"}'), (7, '注册普通用户失败手机号12位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"188209922231","pwd":"Aa123456"}', '{"code": 2, "msg": "无效的手机格式"}'), (8, '注册普通用户失败手机号为空', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"","pwd":"Aa123456"}', '{"code": 1, "msg": "手机号为空"}'), (9, '注册普通用户失败密码长度17位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": "Aa123456789012345"}', '{"code": 2, "msg": "密码格式为8到16位"}'), (10, '注册普通用户失败密码长度7位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": "Aa12345"}', '{"code": 2, "msg": "密码格式为8到16位"}'), (11, '注册普通用户失败密码为空', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": ""}', '{"code": 1, "msg": "密码为空"}')]
+2021-05-29 21:52:23,937-py39-INFO-handle_excel.py-__get_all_data-[line:35]：excel读取到的测试用例表头数据：
+2021-05-29 21:52:23,937-py39-INFO-handle_excel.py-__get_all_data-[line:36]：('id', 'title', 'method', 'url', 'data', 'expected_data')
+2021-05-29 21:52:23,937-py39-INFO-handle_excel.py-get_case_data_dict-[line:47]：测试用例数据拼接完成：
+2021-05-29 21:52:23,937-py39-INFO-handle_excel.py-get_case_data_dict-[line:48]：[{'id': 1, 'title': '注册成功普通用户,昵称10位,密码长度8位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"#mobile_phone#","pwd":"Aa123456","type":0,"reg_name":"注册注册注册注册注册"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 2, 'title': '注册成功管理员,昵称1位,密码长度16位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13100000002","pwd":"Aa12345678901234","type":0,"reg_name":"注"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 3, 'title': '注册成功不传用户类型和昵称字段', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13100000003","pwd":"Aa123456"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 5, 'title': '注册普通用户失败手机号已存在', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"18820992515","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "账号已存在"}'}, {'id': 6, 'title': '注册普通用户失败手机号10位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"1882099222","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "无效的手机格式"}'}, {'id': 7, 'title': '注册普通用户失败手机号12位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"188209922231","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "无效的手机格式"}'}, {'id': 8, 'title': '注册普通用户失败手机号为空', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"","pwd":"Aa123456"}', 'expected_data': '{"code": 1, "msg": "手机号为空"}'}, {'id': 9, 'title': '注册普通用户失败密码长度17位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": "Aa123456789012345"}', 'expected_data': '{"code": 2, "msg": "密码格式为8到16位"}'}, {'id': 10, 'title': '注册普通用户失败密码长度7位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": "Aa12345"}', 'expected_data': '{"code": 2, "msg": "密码格式为8到16位"}'}, {'id': 11, 'title': '注册普通用户失败密码为空', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": ""}', 'expected_data': '{"code": 1, "msg": "密码为空"}'}]
+2021-05-29 21:52:23,953-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:52:23,953-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:52:23,953-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '#mobile_phone#', 'pwd': 'Aa123456', 'type': 0, 'reg_name': '注册注册注册注册注册'}
+2021-05-29 21:52:24,050-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:52:24,059-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:52:24,060-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:52:24,060-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13100000002', 'pwd': 'Aa12345678901234', 'type': 0, 'reg_name': '注'}
+2021-05-29 21:52:24,284-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:52:24,284-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:52:24,285-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:52:24,285-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13100000003', 'pwd': 'Aa123456'}
+2021-05-29 21:52:24,515-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:52:24,516-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:52:24,516-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:52:24,516-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '18820992515', 'pwd': 'Aa123456'}
+2021-05-29 21:52:24,754-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:52:24,755-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:52:24,755-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:52:24,756-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '1882099222', 'pwd': 'Aa123456'}
+2021-05-29 21:52:24,809-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:52:24,811-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:52:24,811-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:52:24,811-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '188209922231', 'pwd': 'Aa123456'}
+2021-05-29 21:52:24,883-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:52:24,884-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:52:24,884-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:52:24,884-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '', 'pwd': 'Aa123456'}
+2021-05-29 21:52:24,930-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 1, 'msg': '手机号为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:52:24,932-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:52:24,932-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:52:24,932-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': 'Aa123456789012345'}
+2021-05-29 21:52:25,001-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:52:25,003-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:52:25,003-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:52:25,003-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': 'Aa12345'}
+2021-05-29 21:52:25,068-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:52:25,069-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:52:25,069-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:52:25,069-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': ''}
+2021-05-29 21:52:25,125-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 1, 'msg': '密码为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:53:14,175-py39-INFO-handle_excel.py-__init__-[line:16]：用例文件名称:
+2021-05-29 21:53:14,176-py39-INFO-handle_excel.py-__init__-[line:17]：D:\ningMengClass\py39AutoTest\case_data\testCase.xlsx
+2021-05-29 21:53:14,176-py39-INFO-handle_excel.py-__init__-[line:18]：sheet_name:
+2021-05-29 21:53:14,176-py39-INFO-handle_excel.py-__init__-[line:19]：register
+2021-05-29 21:53:14,196-py39-INFO-handle_excel.py-__get_all_data-[line:33]：excel读取到的测试用例数据：
+2021-05-29 21:53:14,196-py39-INFO-handle_excel.py-__get_all_data-[line:34]：[(1, '注册成功普通用户,昵称10位,密码长度8位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"#mobile_phone#","pwd":"Aa123456","type":0,"reg_name":"注册注册注册注册注册"}', '{"code": 0, "msg": "OK"}'), (2, '注册成功管理员,昵称1位,密码长度16位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13100000002","pwd":"Aa12345678901234","type":0,"reg_name":"注"}', '{"code": 0, "msg": "OK"}'), (3, '注册成功不传用户类型和昵称字段', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13100000003","pwd":"Aa123456"}', '{"code": 0, "msg": "OK"}'), (5, '注册普通用户失败手机号已存在', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"18820992515","pwd":"Aa123456"}', '{"code": 2, "msg": "账号已存在"}'), (6, '注册普通用户失败手机号10位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"1882099222","pwd":"Aa123456"}', '{"code": 2, "msg": "无效的手机格式"}'), (7, '注册普通用户失败手机号12位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"188209922231","pwd":"Aa123456"}', '{"code": 2, "msg": "无效的手机格式"}'), (8, '注册普通用户失败手机号为空', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"","pwd":"Aa123456"}', '{"code": 1, "msg": "手机号为空"}'), (9, '注册普通用户失败密码长度17位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": "Aa123456789012345"}', '{"code": 2, "msg": "密码格式为8到16位"}'), (10, '注册普通用户失败密码长度7位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": "Aa12345"}', '{"code": 2, "msg": "密码格式为8到16位"}'), (11, '注册普通用户失败密码为空', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": ""}', '{"code": 1, "msg": "密码为空"}')]
+2021-05-29 21:53:14,196-py39-INFO-handle_excel.py-__get_all_data-[line:35]：excel读取到的测试用例表头数据：
+2021-05-29 21:53:14,196-py39-INFO-handle_excel.py-__get_all_data-[line:36]：('id', 'title', 'method', 'url', 'data', 'expected_data')
+2021-05-29 21:53:14,197-py39-INFO-handle_excel.py-get_case_data_dict-[line:47]：测试用例数据拼接完成：
+2021-05-29 21:53:14,197-py39-INFO-handle_excel.py-get_case_data_dict-[line:48]：[{'id': 1, 'title': '注册成功普通用户,昵称10位,密码长度8位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"#mobile_phone#","pwd":"Aa123456","type":0,"reg_name":"注册注册注册注册注册"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 2, 'title': '注册成功管理员,昵称1位,密码长度16位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13100000002","pwd":"Aa12345678901234","type":0,"reg_name":"注"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 3, 'title': '注册成功不传用户类型和昵称字段', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13100000003","pwd":"Aa123456"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 5, 'title': '注册普通用户失败手机号已存在', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"18820992515","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "账号已存在"}'}, {'id': 6, 'title': '注册普通用户失败手机号10位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"1882099222","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "无效的手机格式"}'}, {'id': 7, 'title': '注册普通用户失败手机号12位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"188209922231","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "无效的手机格式"}'}, {'id': 8, 'title': '注册普通用户失败手机号为空', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"","pwd":"Aa123456"}', 'expected_data': '{"code": 1, "msg": "手机号为空"}'}, {'id': 9, 'title': '注册普通用户失败密码长度17位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": "Aa123456789012345"}', 'expected_data': '{"code": 2, "msg": "密码格式为8到16位"}'}, {'id': 10, 'title': '注册普通用户失败密码长度7位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": "Aa12345"}', 'expected_data': '{"code": 2, "msg": "密码格式为8到16位"}'}, {'id': 11, 'title': '注册普通用户失败密码为空', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": ""}', 'expected_data': '{"code": 1, "msg": "密码为空"}'}]
+2021-05-29 21:53:14,199-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:53:14,199-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:53:14,200-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '#mobile_phone#', 'pwd': 'Aa123456', 'type': 0, 'reg_name': '注册注册注册注册注册'}
+2021-05-29 21:53:14,269-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:53:14,272-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:53:14,272-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:53:14,272-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13100000002', 'pwd': 'Aa12345678901234', 'type': 0, 'reg_name': '注'}
+2021-05-29 21:53:14,541-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:53:14,544-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:53:14,544-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:53:14,544-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13100000003', 'pwd': 'Aa123456'}
+2021-05-29 21:53:14,776-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:53:14,777-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:53:14,777-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:53:14,777-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '18820992515', 'pwd': 'Aa123456'}
+2021-05-29 21:53:15,127-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:53:15,127-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:53:15,127-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:53:15,127-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '1882099222', 'pwd': 'Aa123456'}
+2021-05-29 21:53:15,180-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:53:15,181-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:53:15,181-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:53:15,181-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '188209922231', 'pwd': 'Aa123456'}
+2021-05-29 21:53:15,231-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:53:15,232-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:53:15,232-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:53:15,232-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '', 'pwd': 'Aa123456'}
+2021-05-29 21:53:15,268-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 1, 'msg': '手机号为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:53:15,269-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:53:15,269-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:53:15,269-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': 'Aa123456789012345'}
+2021-05-29 21:53:15,326-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:53:15,326-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:53:15,326-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:53:15,326-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': 'Aa12345'}
+2021-05-29 21:53:15,385-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 21:53:15,385-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 21:53:15,385-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 21:53:15,385-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': ''}
+2021-05-29 21:53:15,435-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 1, 'msg': '密码为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:02:24,498-py39-INFO-handle_excel.py-__init__-[line:16]：用例文件名称:
+2021-05-29 22:02:24,498-py39-INFO-handle_excel.py-__init__-[line:17]：D:\ningMengClass\py39AutoTest\case_data\testCase.xlsx
+2021-05-29 22:02:24,499-py39-INFO-handle_excel.py-__init__-[line:18]：sheet_name:
+2021-05-29 22:02:24,499-py39-INFO-handle_excel.py-__init__-[line:19]：register
+2021-05-29 22:02:24,517-py39-INFO-handle_excel.py-__get_all_data-[line:33]：excel读取到的测试用例数据：
+2021-05-29 22:02:24,517-py39-INFO-handle_excel.py-__get_all_data-[line:34]：[(1, '注册成功普通用户,昵称10位,密码长度8位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13900000001","pwd":"Aa123456","type":0,"reg_name":"注册注册注册注册注册"}', '{"code": 0, "msg": "OK"}'), (2, '注册成功管理员,昵称1位,密码长度16位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13100000005","pwd":"Aa12345678901234","type":0,"reg_name":"注"}', '{"code": 0, "msg": "OK"}'), (3, '注册成功不传用户类型和昵称字段', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13100000006","pwd":"Aa123456"}', '{"code": 0, "msg": "OK"}'), (5, '注册普通用户失败手机号已存在', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"18820992515","pwd":"Aa123456"}', '{"code": 2, "msg": "账号已存在"}'), (6, '注册普通用户失败手机号10位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"1882099222","pwd":"Aa123456"}', '{"code": 2, "msg": "无效的手机格式"}'), (7, '注册普通用户失败手机号12位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"188209922231","pwd":"Aa123456"}', '{"code": 2, "msg": "无效的手机格式"}'), (8, '注册普通用户失败手机号为空', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"","pwd":"Aa123456"}', '{"code": 1, "msg": "手机号为空"}'), (9, '注册普通用户失败密码长度17位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": "Aa123456789012345"}', '{"code": 2, "msg": "密码格式为8到16位"}'), (10, '注册普通用户失败密码长度7位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": "Aa12345"}', '{"code": 2, "msg": "密码格式为8到16位"}'), (11, '注册普通用户失败密码为空', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": ""}', '{"code": 1, "msg": "密码为空"}')]
+2021-05-29 22:02:24,517-py39-INFO-handle_excel.py-__get_all_data-[line:35]：excel读取到的测试用例表头数据：
+2021-05-29 22:02:24,517-py39-INFO-handle_excel.py-__get_all_data-[line:36]：('id', 'title', 'method', 'url', 'data', 'expected_data')
+2021-05-29 22:02:24,517-py39-INFO-handle_excel.py-get_case_data_dict-[line:47]：测试用例数据拼接完成：
+2021-05-29 22:02:24,517-py39-INFO-handle_excel.py-get_case_data_dict-[line:48]：[{'id': 1, 'title': '注册成功普通用户,昵称10位,密码长度8位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13900000001","pwd":"Aa123456","type":0,"reg_name":"注册注册注册注册注册"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 2, 'title': '注册成功管理员,昵称1位,密码长度16位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13100000005","pwd":"Aa12345678901234","type":0,"reg_name":"注"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 3, 'title': '注册成功不传用户类型和昵称字段', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13100000006","pwd":"Aa123456"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 5, 'title': '注册普通用户失败手机号已存在', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"18820992515","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "账号已存在"}'}, {'id': 6, 'title': '注册普通用户失败手机号10位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"1882099222","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "无效的手机格式"}'}, {'id': 7, 'title': '注册普通用户失败手机号12位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"188209922231","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "无效的手机格式"}'}, {'id': 8, 'title': '注册普通用户失败手机号为空', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"","pwd":"Aa123456"}', 'expected_data': '{"code": 1, "msg": "手机号为空"}'}, {'id': 9, 'title': '注册普通用户失败密码长度17位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": "Aa123456789012345"}', 'expected_data': '{"code": 2, "msg": "密码格式为8到16位"}'}, {'id': 10, 'title': '注册普通用户失败密码长度7位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": "Aa12345"}', 'expected_data': '{"code": 2, "msg": "密码格式为8到16位"}'}, {'id': 11, 'title': '注册普通用户失败密码为空', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": ""}', 'expected_data': '{"code": 1, "msg": "密码为空"}'}]
+2021-05-29 22:02:24,528-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:02:24,528-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:02:24,528-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13900000001', 'pwd': 'Aa123456', 'type': 0, 'reg_name': '注册注册注册注册注册'}
+2021-05-29 22:02:24,881-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:02:24,882-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:02:24,882-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:02:24,882-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13100000005', 'pwd': 'Aa12345678901234', 'type': 0, 'reg_name': '注'}
+2021-05-29 22:02:25,145-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 0, 'msg': 'OK', 'data': {'id': 1234579081, 'reg_name': '注', 'mobile_phone': '13100000005'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:02:25,146-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:02:25,146-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:02:25,146-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13100000006', 'pwd': 'Aa123456'}
+2021-05-29 22:02:25,390-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 0, 'msg': 'OK', 'data': {'id': 1234579082, 'reg_name': '小柠檬', 'mobile_phone': '13100000006'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:02:25,390-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:02:25,390-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:02:25,390-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '18820992515', 'pwd': 'Aa123456'}
+2021-05-29 22:02:25,649-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:02:25,649-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:02:25,649-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:02:25,649-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '1882099222', 'pwd': 'Aa123456'}
+2021-05-29 22:02:25,694-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:02:25,695-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:02:25,695-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:02:25,695-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '188209922231', 'pwd': 'Aa123456'}
+2021-05-29 22:02:25,754-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:02:25,754-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:02:25,754-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:02:25,754-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '', 'pwd': 'Aa123456'}
+2021-05-29 22:02:25,812-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 1, 'msg': '手机号为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:02:25,812-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:02:25,812-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:02:25,812-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': 'Aa123456789012345'}
+2021-05-29 22:02:25,885-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:02:25,886-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:02:25,886-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:02:25,886-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': 'Aa12345'}
+2021-05-29 22:02:25,964-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:02:25,965-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:02:25,965-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:02:25,965-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': ''}
+2021-05-29 22:02:26,030-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 1, 'msg': '密码为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:09:05,350-py39-INFO-handle_excel.py-__init__-[line:16]：用例文件名称:
+2021-05-29 22:09:05,350-py39-INFO-handle_excel.py-__init__-[line:17]：D:\ningMengClass\py39AutoTest\case_data\testCase.xlsx
+2021-05-29 22:09:05,350-py39-INFO-handle_excel.py-__init__-[line:18]：sheet_name:
+2021-05-29 22:09:05,350-py39-INFO-handle_excel.py-__init__-[line:19]：register
+2021-05-29 22:09:05,368-py39-INFO-handle_excel.py-__get_all_data-[line:33]：excel读取到的测试用例数据：
+2021-05-29 22:09:05,368-py39-INFO-handle_excel.py-__get_all_data-[line:34]：[(1, '注册成功普通用户,昵称10位,密码长度8位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13900000001","pwd":"Aa123456","type":0,"reg_name":"注册注册注册注册注册"}', '{"code": 0, "msg": "OK"}'), (2, '注册成功管理员,昵称1位,密码长度16位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13100000005","pwd":"Aa12345678901234","type":0,"reg_name":"注"}', '{"code": 0, "msg": "OK"}'), (3, '注册成功不传用户类型和昵称字段', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13100000006","pwd":"Aa123456"}', '{"code": 0, "msg": "OK"}'), (5, '注册普通用户失败手机号已存在', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"18820992515","pwd":"Aa123456"}', '{"code": 2, "msg": "账号已存在"}'), (6, '注册普通用户失败手机号10位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"1882099222","pwd":"Aa123456"}', '{"code": 2, "msg": "无效的手机格式"}'), (7, '注册普通用户失败手机号12位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"188209922231","pwd":"Aa123456"}', '{"code": 2, "msg": "无效的手机格式"}'), (8, '注册普通用户失败手机号为空', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"","pwd":"Aa123456"}', '{"code": 1, "msg": "手机号为空"}'), (9, '注册普通用户失败密码长度17位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": "Aa123456789012345"}', '{"code": 2, "msg": "密码格式为8到16位"}'), (10, '注册普通用户失败密码长度7位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": "Aa12345"}', '{"code": 2, "msg": "密码格式为8到16位"}'), (11, '注册普通用户失败密码为空', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": ""}', '{"code": 1, "msg": "密码为空"}')]
+2021-05-29 22:09:05,368-py39-INFO-handle_excel.py-__get_all_data-[line:35]：excel读取到的测试用例表头数据：
+2021-05-29 22:09:05,369-py39-INFO-handle_excel.py-__get_all_data-[line:36]：('id', 'title', 'method', 'url', 'data', 'expected_data')
+2021-05-29 22:09:05,369-py39-INFO-handle_excel.py-get_case_data_dict-[line:47]：测试用例数据拼接完成：
+2021-05-29 22:09:05,369-py39-INFO-handle_excel.py-get_case_data_dict-[line:48]：[{'id': 1, 'title': '注册成功普通用户,昵称10位,密码长度8位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13900000001","pwd":"Aa123456","type":0,"reg_name":"注册注册注册注册注册"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 2, 'title': '注册成功管理员,昵称1位,密码长度16位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13100000005","pwd":"Aa12345678901234","type":0,"reg_name":"注"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 3, 'title': '注册成功不传用户类型和昵称字段', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13100000006","pwd":"Aa123456"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 5, 'title': '注册普通用户失败手机号已存在', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"18820992515","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "账号已存在"}'}, {'id': 6, 'title': '注册普通用户失败手机号10位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"1882099222","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "无效的手机格式"}'}, {'id': 7, 'title': '注册普通用户失败手机号12位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"188209922231","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "无效的手机格式"}'}, {'id': 8, 'title': '注册普通用户失败手机号为空', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"","pwd":"Aa123456"}', 'expected_data': '{"code": 1, "msg": "手机号为空"}'}, {'id': 9, 'title': '注册普通用户失败密码长度17位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": "Aa123456789012345"}', 'expected_data': '{"code": 2, "msg": "密码格式为8到16位"}'}, {'id': 10, 'title': '注册普通用户失败密码长度7位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": "Aa12345"}', 'expected_data': '{"code": 2, "msg": "密码格式为8到16位"}'}, {'id': 11, 'title': '注册普通用户失败密码为空', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": ""}', 'expected_data': '{"code": 1, "msg": "密码为空"}'}]
+2021-05-29 22:09:05,374-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:09:05,374-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:09:05,374-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13900000001', 'pwd': 'Aa123456', 'type': 0, 'reg_name': '注册注册注册注册注册'}
+2021-05-29 22:09:05,712-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:09:05,713-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:09:05,713-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:09:05,714-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13100000005', 'pwd': 'Aa12345678901234', 'type': 0, 'reg_name': '注'}
+2021-05-29 22:09:05,956-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:09:05,958-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:09:05,958-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:09:05,958-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13100000006', 'pwd': 'Aa123456'}
+2021-05-29 22:09:06,217-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:09:06,218-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:09:06,218-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:09:06,218-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '18820992515', 'pwd': 'Aa123456'}
+2021-05-29 22:09:06,268-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:09:06,269-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:09:06,269-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:09:06,269-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '1882099222', 'pwd': 'Aa123456'}
+2021-05-29 22:09:06,334-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:09:06,334-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:09:06,334-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:09:06,335-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '188209922231', 'pwd': 'Aa123456'}
+2021-05-29 22:09:06,370-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:09:06,370-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:09:06,370-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:09:06,370-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '', 'pwd': 'Aa123456'}
+2021-05-29 22:09:06,420-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 1, 'msg': '手机号为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:09:06,421-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:09:06,421-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:09:06,421-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': 'Aa123456789012345'}
+2021-05-29 22:09:06,483-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:09:06,483-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:09:06,483-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:09:06,483-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': 'Aa12345'}
+2021-05-29 22:09:06,528-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:09:06,528-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:09:06,528-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:09:06,528-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': ''}
+2021-05-29 22:09:06,593-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 1, 'msg': '密码为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:11:27,140-py39-INFO-handle_excel.py-__init__-[line:16]：用例文件名称:
+2021-05-29 22:11:27,140-py39-INFO-handle_excel.py-__init__-[line:17]：D:\ningMengClass\py39AutoTest\case_data\testCase.xlsx
+2021-05-29 22:11:27,141-py39-INFO-handle_excel.py-__init__-[line:18]：sheet_name:
+2021-05-29 22:11:27,141-py39-INFO-handle_excel.py-__init__-[line:19]：register
+2021-05-29 22:11:27,159-py39-INFO-handle_excel.py-__get_all_data-[line:33]：excel读取到的测试用例数据：
+2021-05-29 22:11:27,159-py39-INFO-handle_excel.py-__get_all_data-[line:34]：[(1, '注册成功普通用户,昵称10位,密码长度8位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13900000001","pwd":"Aa123456","type":0,"reg_name":"注册注册注册注册注册"}', '{"code": 0, "msg": "OK"}'), (2, '注册成功管理员,昵称1位,密码长度16位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13100000005","pwd":"Aa12345678901234","type":0,"reg_name":"注"}', '{"code": 0, "msg": "OK"}'), (3, '注册成功不传用户类型和昵称字段', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13100000006","pwd":"Aa123456"}', '{"code": 0, "msg": "OK"}'), (5, '注册普通用户失败手机号已存在', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"18820992515","pwd":"Aa123456"}', '{"code": 2, "msg": "账号已存在"}'), (6, '注册普通用户失败手机号10位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"1882099222","pwd":"Aa123456"}', '{"code": 2, "msg": "无效的手机格式"}'), (7, '注册普通用户失败手机号12位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"188209922231","pwd":"Aa123456"}', '{"code": 2, "msg": "无效的手机格式"}'), (8, '注册普通用户失败手机号为空', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"","pwd":"Aa123456"}', '{"code": 1, "msg": "手机号为空"}'), (9, '注册普通用户失败密码长度17位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": "Aa123456789012345"}', '{"code": 2, "msg": "密码格式为8到16位"}'), (10, '注册普通用户失败密码长度7位', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": "Aa12345"}', '{"code": 2, "msg": "密码格式为8到16位"}'), (11, '注册普通用户失败密码为空', 'post', 'http://api.lemonban.com/futureloan/member/register', '{"mobile_phone":"13000000001","pwd": ""}', '{"code": 1, "msg": "密码为空"}')]
+2021-05-29 22:11:27,159-py39-INFO-handle_excel.py-__get_all_data-[line:35]：excel读取到的测试用例表头数据：
+2021-05-29 22:11:27,160-py39-INFO-handle_excel.py-__get_all_data-[line:36]：('id', 'title', 'method', 'url', 'data', 'expected_data')
+2021-05-29 22:11:27,160-py39-INFO-handle_excel.py-get_case_data_dict-[line:47]：测试用例数据拼接完成：
+2021-05-29 22:11:27,160-py39-INFO-handle_excel.py-get_case_data_dict-[line:48]：[{'id': 1, 'title': '注册成功普通用户,昵称10位,密码长度8位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13900000001","pwd":"Aa123456","type":0,"reg_name":"注册注册注册注册注册"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 2, 'title': '注册成功管理员,昵称1位,密码长度16位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13100000005","pwd":"Aa12345678901234","type":0,"reg_name":"注"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 3, 'title': '注册成功不传用户类型和昵称字段', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13100000006","pwd":"Aa123456"}', 'expected_data': '{"code": 0, "msg": "OK"}'}, {'id': 5, 'title': '注册普通用户失败手机号已存在', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"18820992515","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "账号已存在"}'}, {'id': 6, 'title': '注册普通用户失败手机号10位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"1882099222","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "无效的手机格式"}'}, {'id': 7, 'title': '注册普通用户失败手机号12位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"188209922231","pwd":"Aa123456"}', 'expected_data': '{"code": 2, "msg": "无效的手机格式"}'}, {'id': 8, 'title': '注册普通用户失败手机号为空', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"","pwd":"Aa123456"}', 'expected_data': '{"code": 1, "msg": "手机号为空"}'}, {'id': 9, 'title': '注册普通用户失败密码长度17位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": "Aa123456789012345"}', 'expected_data': '{"code": 2, "msg": "密码格式为8到16位"}'}, {'id': 10, 'title': '注册普通用户失败密码长度7位', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": "Aa12345"}', 'expected_data': '{"code": 2, "msg": "密码格式为8到16位"}'}, {'id': 11, 'title': '注册普通用户失败密码为空', 'method': 'post', 'url': 'http://api.lemonban.com/futureloan/member/register', 'data': '{"mobile_phone":"13000000001","pwd": ""}', 'expected_data': '{"code": 1, "msg": "密码为空"}'}]
+2021-05-29 22:11:27,170-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:11:27,170-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:11:27,170-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13900000001', 'pwd': 'Aa123456', 'type': 0, 'reg_name': '注册注册注册注册注册'}
+2021-05-29 22:11:27,240-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:11:27,241-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:11:27,241-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:11:27,241-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13100000005', 'pwd': 'Aa12345678901234', 'type': 0, 'reg_name': '注'}
+2021-05-29 22:11:27,290-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:11:27,290-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:11:27,290-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:11:27,290-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13100000006', 'pwd': 'Aa123456'}
+2021-05-29 22:11:27,355-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:11:27,355-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:11:27,355-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:11:27,356-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '18820992515', 'pwd': 'Aa123456'}
+2021-05-29 22:11:27,405-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:11:27,405-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:11:27,405-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:11:27,405-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '1882099222', 'pwd': 'Aa123456'}
+2021-05-29 22:11:27,457-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:11:27,457-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:11:27,457-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:11:27,457-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '188209922231', 'pwd': 'Aa123456'}
+2021-05-29 22:11:27,516-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:11:27,516-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:11:27,516-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:11:27,516-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '', 'pwd': 'Aa123456'}
+2021-05-29 22:11:27,584-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 1, 'msg': '手机号为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:11:27,584-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:11:27,585-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:11:27,585-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': 'Aa123456789012345'}
+2021-05-29 22:11:27,649-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:11:27,649-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:11:27,649-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:11:27,649-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': 'Aa12345'}
+2021-05-29 22:11:27,686-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2021-05-29 22:11:27,687-py39-INFO-handle_request.py-send_request-[line:28]：请求方式:
+post
+2021-05-29 22:11:27,687-py39-INFO-handle_request.py-send_request-[line:29]：请求地址:
+http://api.lemonban.com/futureloan/member/register
+2021-05-29 22:11:27,687-py39-INFO-handle_request.py-send_request-[line:30]：请求参数：
+{'mobile_phone': '13000000001', 'pwd': ''}
+2021-05-29 22:11:27,751-py39-INFO-handle_request.py-send_request-[line:38]：POST请求返回:
+{'code': 1, 'msg': '密码为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
