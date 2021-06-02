@@ -21,6 +21,7 @@ class SendRequest:
         :param token: 鉴权token
         :return: 返回接口响应结果
         """
+
         try:
             my_logger.info(msg='请求方式:\n{}'.format(method))
             my_logger.info(msg='请求地址:\n{}'.format(url))

@@ -33,5 +33,4 @@ log_dir = os.path.join(base_dir,'logs','{}.log'.format(log_file_name))
 # 测试报告路径
 report_dir = os.path.join(base_dir,'reports')
 report_name = time.strftime("%Y%m%d_%H%M%S.html",time.localtime())
-print(report_dir)
 

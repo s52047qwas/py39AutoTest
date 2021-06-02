@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 6/5/2021 下午 8:19
-# @Author  : 海励
-# @File    : demo1703.py
-
 
 import pprint
 from openpyxl import load_workbook
