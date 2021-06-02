@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 29/5/2021 下午 8:21
-# @Author  : 海励
-# @File    : test_register.py
-
 
 # from ddt import ddt,data,unpack
 import unittest
