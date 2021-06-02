@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
-# @Time    : 13/5/2021 下午 8:21
-# @Author  : 海励
-# @File    : test_case.py
+
 from ddt import ddt,data,unpack
 import unittest
 import ast
@@ -14,7 +11,8 @@ case_list = HandleExcel(file_path='testCase.xlsx',sheet_name='sheet1',).get_case
 print('这里是从excel获取的测试用例')
 print(case_list)
 #实例化业务逻辑
-login = LoginCase()
+
+
 @ddt
 class TestDemo(unittest.TestCase):
     #初始化函数，后置清理函数都可以不写，因为我们没有前置条件，也没有后置清理
