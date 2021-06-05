@@ -4,7 +4,6 @@ import unittest
 import ast
 
 from tools.handle_excel import HandleExcel
-#from login import LoginCase
 
 #获取测试用例
 case_list = HandleExcel(file_path='testCase.xlsx',sheet_name='sheet1',).get_case_data_dict()
@@ -19,6 +18,7 @@ class TestDemo(unittest.TestCase):
     @data(*case_list)
     def test_login(self,case):
         """测试用例"""
+
         print('这里是测试用例传进来的参数')
         print(case)
         #业务逻辑

@@ -1,7 +1,6 @@
-
-
 import requests
 import json
+import pprint
 
 # "Authorization": "Bearer token_value"
 class ApiTest:
@@ -103,7 +102,7 @@ class ApiTest:
     def get_loans(self):
         url = 'http://api.lemonban.com/futureloan/loans'
         res = requests.get(url=url,headers =  self.headers_2)
-        print('投资项目列表：',res.json())
+        pprint.pprint(res.json())
 
 
 if __name__ == '__main__':
