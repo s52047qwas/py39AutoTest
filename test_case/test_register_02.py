@@ -1,4 +1,3 @@
-
 import unittest
 import ast
 import traceback
@@ -42,26 +41,23 @@ class TestDemo(unittest.TestCase):
 
         my_logger.info(msg=case['data'])
 
-        #替换数据
-        # if '#mobile#' in case['data']:
-        #     #拿到未注册手机号
-        #     my_logger.info(msg='需要替换')
-        #     phone = self.send_phone.get_phone()
-        #     request_data = case['data'].replace('#mobile#',phone)
-        # else:
-        #     request_data = case['data']
-        #     my_logger.info(msg='不需要替换')
-        #     phone =None
+        # 替换数据
+        if '#mobile#' in case['data']:
+            #拿到未注册手机号
+            my_logger.info(msg='需要替换')
+            phone = self.send_phone.get_phone()
+            request_data = case['data'].replace('#mobile#',phone)
+        else:
+            request_data = case['data']
+            my_logger.info(msg='不需要替换')
+            phone =None
 
-        ##代替上面的替换数据
-        #1、请求参数替换
-        request_data = self.handle_replace.replace_request_data(request_data=case['data'],replace_request_data=case['replace_request_data'])
 
 
         ##数据库校验sql替换
         if case['check_db']:
             if '#mobile#' in case['check_db']:
-                check_db = case['check_db'].replace('#mobile',getattr(HandleAttribute,'mobile'))
+                check_db = case['check_db'].replace('#mobile#',getattr(HandleAttribute,'mobile'))
                 my_logger.info(msg='数据库校验语句：{}'.format(check_db))
 
             else:
@@ -74,7 +70,7 @@ class TestDemo(unittest.TestCase):
 
 
         #发起请求
-        response = self.send_request.send_request(method=case["method"],url=case['url'],data=request_data)
+        response = self.send_request.send_request(method=case["method"],url=case['url'],data=ast.literal_eval(request_data))
 
         # 获取响应结果
         actual_data = {'code': response['code'], 'msg': response['msg']}
@@ -84,22 +80,6 @@ class TestDemo(unittest.TestCase):
         #数据库校验
         self.checkdb.check_db(check_db=check_db)
 
-
-        ##替换数据
-        # data_1 = ast.literal_eval(case["data"])
-        #
-        # if data_1['mobile_phone'] == "#mobile#":
-        #     phone = self.send_phone.check_phone()
-        #     data_1['mobile_phone']=phone
-        #
-        #
-        #
-        # response = self.send_request.send_request(method=case["method"],url=case["url"],data=data_1)
-        # # 获取响应结果
-        # actual_data = {'code': response['code'], 'msg': response['msg']}
-        # #断言
-        # self.assertEqual(first=ast.literal_eval(case['expected_data']),second=actual_data)
-        # print(data_1)
 
 
 if __name__ == '__main__':
