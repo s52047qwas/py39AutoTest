@@ -14,8 +14,8 @@ class ApiTest:
     # 注册
     def user_register(self):
         url= 'http://api.lemonban.com/futureloan/member/register'
-        data={'mobile_phone':'13000000001',
-              'pwd': ''
+        data={'mobile_phone':'13360936399',
+              'pwd': 'Aa123456'
               }
         res = requests.post(url=url,json=data,headers=self.headers_2)
         print('注册返回：',res.json())
@@ -23,8 +23,9 @@ class ApiTest:
     # 登陆
     def user_login(self):
         url = 'http://api.lemonban.com/futureloan/member/login'
-        data={'mobile_phone':'18820992515','pwd':'Aa123456'}
+        data={'mobile_phone':'13360936399','pwd':'Aa123456'}
         res = requests.post(url=url,json=data,headers=self.headers_2)
+        print('登陆接口返回：', res.json())
         self.headers_2["Authorization"] = "Bearer {}".format(res.json()['data']['token_info']['token'])
         print('登陆接口返回：',res.json())
         member_id = res.json()['data']['id']
