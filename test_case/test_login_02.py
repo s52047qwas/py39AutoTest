@@ -57,4 +57,4 @@ class TestDemo():
 
 
 if __name__ == '__main__':
-    pytest.main(['-s','-v','test_login_02.py'])
+    pytest.main(["-s","-v","test_case2.py","--html=report1.html", "--alluredir=allure1_files"])
