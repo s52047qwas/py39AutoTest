@@ -1,4 +1,4 @@
-from tools.handle_phone import SendPhone
+from tools.handle_phone import HandlePhone
 from tools.handle_attribute import HandleAttribute
 from tools.handle_ini import conf
 from tools.handle_db import mysql
@@ -8,7 +8,7 @@ import ast
 class HandleReplace:
 
     def __init__(self):
-        self.handle_phone = SendPhone()
+        self.handle_phone = HandlePhone()
 
 
     #设置类属性（全局变量）

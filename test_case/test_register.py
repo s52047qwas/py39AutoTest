@@ -11,7 +11,7 @@ from tools.handle_excel import HandleExcel
 from tools.handle_path import case_data_dir
 from tools.handle_ini import conf
 from tools.handle_request import SendRequest
-from tools.handle_phone import SendPhone
+from tools.handle_phone import HandlePhone
 from tools.handle_db import mysql
 from tools.handle_check_db_data import CheckDb
 from tools.handel_replace import HandleReplace
@@ -29,7 +29,7 @@ class TestDemo(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.send_request = SendRequest()
-        cls.send_phone = SendPhone()
+        cls.send_phone = HandlePhone()
         cls.checkdb = CheckDb()
         cls.handle_replace = HandleReplace()
 
