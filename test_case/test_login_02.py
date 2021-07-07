@@ -7,15 +7,24 @@ import ast
 
 import pytest
 
-from py_auto39.tools.handle_excel import HandleExcel
-from py_auto39.tools.handle_path import case_data_dir
-from py_auto39.tools.handle_ini import conf
+import os
+import sys
+rootpath=str('/var/jenkins_home/workspace/py_auto39')
+syspath=sys.path
+sys.path=[]
+sys.path.append(rootpath)#将工程根目录加入到python搜索路径中
+sys.path.extend([rootpath+i for i in os.listdir(rootpath) if i[0]!="."])#将工程目录下的一级目录添加到python搜索路径中
+sys.path.extend(syspath)
+
+from tools.handle_excel import HandleExcel
+from tools.handle_path import case_data_dir
+from tools.handle_ini import conf
 # from tools.handle_request import SendRequest
 # from tools.handle_phone import HandlePhone
 # from tools.handle_db import mysql
 # from tools.handle_check_db_data import CheckDb
 # from tools.handle_replace import HandleReplace
-from py_auto39.tools.handle_attribute import HandleAttribute
+from tools.handle_attribute import HandleAttribute
 
 #获取测试用例
 case_list = HandleExcel(file_path=case_data_dir,sheet_name=conf.get('sheet','name')).get_case_data_dict()
